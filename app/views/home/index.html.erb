@@ -2,37 +2,43 @@
 
     <div class="box_connection">
 
-        <div class="box_connection_left">
-            <H2><b>THP school</b></H2>
-            <h3>L'inscription devient +  simple</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <hr>
-            <ul>
-              <li><i class="far fa-envelope"></i>Un seul formulaire
-              </li>
-              <li><i class="fas fa-child"></i>Gérer facilement vos candidatures
-              </li>
-              <li><i class="fas fa-cloud"></i>Stockez vos données THP
-              </li>
-            </ul>
-        </div>
+        <% unless user_signed_in? %>
+            <div class="box_connection_left">
+                <H2><b>THP school</b></H2>
+                <h3>L'inscription devient +  simple</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <hr>
+                <ul>
+                  <li><i class="far fa-envelope"></i>Un seul formulaire
+                  </li>
+                  <li><i class="fas fa-child"></i>Gérer facilement vos candidatures
+                  </li>
+                  <li><i class="fas fa-cloud"></i>Stockez vos données THP
+                  </li>
+                </ul>
+            </div>
 
-        <div class="box_connection_right">
+            <div class="box_connection_right">
 
-          <div class="box_connection_right_top">
-            <H2>Se connecter</h2>
-                <br>
-                <%= form_tag new_user_session_path do %>
-                  <%= text_field_tag 'user[email]' %>
-                  <%= password_field_tag 'user[password]', name="Mot de passe :" %>
-                 <%=  submit_tag 'Login' %>
-                 <% end %>
-          </div>
-          <div class="box_connection_right_bottom">
-                <%= link_to "S'inscrire", new_user_registration_path%>
-          </div>
+              <div class="box_connection_right_top">
+                <H2>Se connecter</h2>
+                    <br>
+                    <%= form_tag new_user_session_path do %>
+                      <%= text_field_tag 'user[email]' %>
+                      <%= password_field_tag 'user[password]', name="Mot de passe :" %>
+                     <%=  submit_tag 'Login' %>
+                     <% end %>
+              </div>
+              <div class="box_connection_right_bottom">
+                    <%= link_to "S'inscrire", new_user_registration_path%>
+              </div>
 
-        </div>
+            </div>
+        <% else%>
+            <p> Vous êtes connectés !
+            <br> Vous êtes contents ?
+            </p>
+        <% end %>
 
     </div>
 

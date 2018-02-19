@@ -1,28 +1,60 @@
-<h2>Log in</h2>
+<div class="container_thp">
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <div class="box_connection">
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+        <div class="box_connection_left">
+            <H2><b>THP school</b></H2>
+            <h3>Et coder devient + simple</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <hr>
+            <ul>
+              <li><i class="far fa-envelope"></i>Un seul formulaire
+              </li>
+              <li><i class="fas fa-child"></i>Gérer facilement vos candidatures
+              </li>
+              <li><i class="fas fa-cloud"></i>Stockez vos données THP
+              </li>
+            </ul>
+        </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+        <div class="box_connection_right">
+
+          <div class="box_connection_right_top">
+              <h2>Se connecter</h2>
+
+              <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                <div class="field">
+                  <%= f.label :email %><br />
+                  <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+                </div>
+
+                <div class="field">
+                  <%= f.label :password %><br />
+                  <%= f.password_field :password, autocomplete: "off" %>
+                </div>
+
+                    <% if devise_mapping.rememberable? -%>
+                      <div class="field">
+                        <%= f.check_box :remember_me %>
+                        <%= f.label :remember_me %>
+                      </div>
+                    <% end -%>
+
+                <div class="actions">
+                  <%= f.submit "Se connecter" %>
+                </div>
+                <br>
+                <%= link_to "Mot de passe oublié ?", new_password_path(resource_name) %><br />
+                <% end %>
+          </div>
+
+          <div class="box_connection_right_bottom">
+                <%= link_to "S'inscrire", new_registration_path(resource_name) %><br />
+                <br><%= link_to 'Rerour', :back %>
+          </div>
+
+        </div>
+
     </div>
-  <% end -%>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
-<br><br>
-<%= link_to 'Rerour', :back %>
+</div>

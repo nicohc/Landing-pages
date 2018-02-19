@@ -3,7 +3,7 @@
     <div class="box_connection">
 
         <div class="box_connection_left">
-            <h2>THP, the school of code</h2>
+            <h2><b>THP, the school of code</b></h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             <hr>
             <ul>
@@ -27,22 +27,23 @@
                         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
                       </div>
                       <div class="field">
-                        <%= f.label :password %>
+                        <%= f.label :"Mot de passe" %>
                         <% if @minimum_password_length %>
-                        <em>(<%= @minimum_password_length %> characters minimum)</em>
+                        <em>(<%= @minimum_password_length %> caaractères minimum)</em>
                         <% end %><br />
                         <%= f.password_field :password, autocomplete: "off" %>
                       </div>
                       <div class="field">
-                        <%= f.label :password_confirmation %><br />
+                        <%= f.label :"Répétez le mot de passe" %><br />
                         <%= f.password_field :password_confirmation, autocomplete: "off" %>
                       </div>
                       <div class="actions">
-                        <%= f.submit "Sign up" %>
+                        <%= f.submit "Valider" %>
                       </div>
                     <% end %>
               </div>
               <div class="box_connection_right_bottom">
+                  <span style="margin-right:15px;">Déjà inscrit ?   </span>
                   <%= render "devise/shared/links" %>
                   <br><br>
                   <%= link_to 'Retour', :back %>
