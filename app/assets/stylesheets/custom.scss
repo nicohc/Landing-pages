@@ -9,15 +9,24 @@
 
 body {
   margin-top: 50px !important;
+
+}
+.backgroundthp{
+  background-image: url(/assets/background.jpg);
+  background-size: cover;
+  height: 100vh;
+
 }
 
 .pageprincipale{
+  /*
   padding-left: 10vw;
   padding-right: 10vw;
+  */
   padding-top: 5px;
   padding-bottom: 10px;
   min-height: 90vh;
-  background-color: #eee;
+
 }
 
 table {

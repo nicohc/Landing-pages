@@ -1,9 +1,34 @@
-<p> Hello</p>
+<div class="container_thp">
 
-<%= form_tag new_user_session_path do %>
-  <%= text_field_tag 'user[email]' %>
-  <%= password_field_tag 'user[password]' %>
- <%=  submit_tag 'Login' %>
- <% end %>
+    <div class="box_connection">
 
-<%= link_to "S'inscrire", new_user_registration_path%>
+        <div class="box_connection_left">
+            <H2> Hello</H2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <hr>
+            <ul>
+              <li>Premier item
+              </li>
+              <li>Second item
+              </li>
+            </ul>
+        </div>
+
+        <div class="box_connection_right">
+
+          <div class="box_connection_right_top">
+                <%= form_tag new_user_session_path do %>
+                  <%= text_field_tag 'user[email]' %>
+                  <%= password_field_tag 'user[password]' %>
+                 <%=  submit_tag 'Login' %>
+                 <% end %>
+          </div>
+          <div class="box_connection_right_bottom">
+                <%= link_to "S'inscrire", new_user_registration_path%>
+          </div>
+          
+        </div>
+
+    </div>
+
+</div>
