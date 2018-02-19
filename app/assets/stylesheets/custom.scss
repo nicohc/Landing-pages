@@ -12,7 +12,7 @@ body {
 
 }
 .backgroundthp{
-  background-image: url(/assets/background.jpg);
+  background-image: asset-data-url("background.jpg");
   background-size: cover;
   height: 100vh;
 
