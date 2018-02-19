@@ -6,11 +6,17 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!--  Import de la police GoogleFont  -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!--  Import de la police d'icones avec FontAwesome -->
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
   </head>
 
   <body>
     <%= render 'layouts/header' %>
-    <div class="backgroundthp">
+    <div class="backgroundthp"></div>
     <div class="pageprincipale">
       <!-- COde pour afficher un message pop-up de bienvenue après l'inscription -->
       <% flash.each do |message_type, message| %>
@@ -20,7 +26,7 @@
 <!-- Debug mode
       <%= debug(params) if Rails.env.development? %>
 -->
+
     </div>
-  </div>
   </body>
 </html>

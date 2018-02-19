@@ -1,32 +1,55 @@
-<h2>Sign up</h2>
+<div class="container_thp">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+    <div class="box_connection">
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <div class="box_connection_left">
+            <h2>THP, the school of code</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <hr>
+            <ul>
+              <li><i class="far fa-envelope"></i>Un seul formulaire
+              </li>
+              <li><i class="fas fa-child"></i>Gérer facilement vos candidatures
+              </li>
+              <li><i class="fas fa-cloud"></i>Stockez vos données THP
+              </li>
+            </ul>
+        </div>
+
+        <div class="box_connection_right">
+
+            <div class="box_connection_right_top">
+                <H2>S'inscrire</h2>
+                    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                      <%= devise_error_messages! %>
+                      <div class="field">
+                        <%= f.label :email %><br />
+                        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+                      </div>
+                      <div class="field">
+                        <%= f.label :password %>
+                        <% if @minimum_password_length %>
+                        <em>(<%= @minimum_password_length %> characters minimum)</em>
+                        <% end %><br />
+                        <%= f.password_field :password, autocomplete: "off" %>
+                      </div>
+                      <div class="field">
+                        <%= f.label :password_confirmation %><br />
+                        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+                      </div>
+                      <div class="actions">
+                        <%= f.submit "Sign up" %>
+                      </div>
+                    <% end %>
+              </div>
+              <div class="box_connection_right_bottom">
+                  <%= render "devise/shared/links" %>
+                  <br><br>
+                  <%= link_to 'Retour', :back %>
+              </div>
+
+          </div>
+
+      </div>
+
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
-<br>
-<br>
-<%= link_to 'Retour', :back %>

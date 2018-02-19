@@ -9,24 +9,42 @@
 
 body {
   margin-top: 50px !important;
+  font-family: 'Montserrat', sans-serif;
 
 }
+
 .backgroundthp{
-  background-image: asset-data-url("background.jpg");
+/*  background-image: asset-data-url("background.jpg");
+*/
+  background-image: url("background.jpg");
   background-size: cover;
   height: 100vh;
-
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+.backgroundthp:hover{
+  filter:sepia(1);
+  -webkit-filter: sepia(1);
 }
 
 .pageprincipale{
-  /*
+  /* Ancien css
   padding-left: 10vw;
   padding-right: 10vw;
   */
+  /* CSS avec la methode flex
   padding-top: 5px;
   padding-bottom: 10px;
   min-height: 90vh;
-
+  top: 0;
+  position: fixed;
+  */
+  z-index:1;
+  position: absolute;
 }
 
 table {
