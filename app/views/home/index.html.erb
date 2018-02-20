@@ -4,8 +4,8 @@
 
         <% unless user_signed_in? %>
             <div class="box_connection_left">
-                <H2><b>THP school</b></H2>
-                <h3>L'inscription devient +  simple</h3>
+                <H1><b>THP school</b></H1>
+                <h3>Et coder devient + simple</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <hr>
                 <ul>
@@ -19,19 +19,21 @@
             </div>
 
             <div class="box_connection_right">
-
-              <div class="box_connection_right_top">
-                <H2>Se connecter</h2>
-                    <br>
-                    <%= form_tag new_user_session_path do %>
-                      <%= text_field_tag 'user[email]' %>
-                      <%= password_field_tag 'user[password]', name="Mot de passe :" %>
-                     <%=  submit_tag 'Login' %>
-                     <% end %>
-              </div>
-              <div class="box_connection_right_bottom">
-                    <%= link_to "S'inscrire", new_user_registration_path%>
-              </div>
+                <div class="box_connection_right_top">
+                      <H2>Se connecter</h2>
+                      <br>
+                      <%= form_tag new_user_session_path do %>
+                        <%= text_field_tag 'user[email]', value="Adresse Email" %>
+                        <%= password_field_tag 'user[password]', value="Mot de passe" %>
+                       <%=  submit_tag 'Se connecter' %>
+                       <% end %>
+                       <br>
+                       <%= link_to "Mot de passe oublié ?", new_user_password_path %><br/>
+                </div>
+                <div class="box_connection_right_bottom">
+                      <span style="margin-right:15px;">Vous ne possédez pas de compte ?</span>
+                      <%= link_to "S'inscrire", new_user_registration_path%>
+                </div>
 
             </div>
         <% else%>

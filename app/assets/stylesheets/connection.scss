@@ -53,20 +53,31 @@
   width: 45%;
 }
 .box_connection_right_top{
-  height:80%;
+  height:75%;
   padding :15px;
+}
+.box_connection_right_top a{
+  color: grey;
+  text-decoration: none;
 }
 .box_connection_right_bottom{
   background-color: #8f8b88;
-  height:20%;
+  height:25%;
   padding :15px;
   color: black;
   text-align: center;
   line-height: 100%;
   text-align: center;
-  line-height: 5vh;
+  line-height: 3vh;
 }
 .box_connection_right_bottom a{
   color: white;
-  font-size: 2rem;
+}
+
+.remember{
+  display: flex;
+  justify-content: flex-start;
+}
+.remember input{
+  width: 20px;
 }

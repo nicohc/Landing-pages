@@ -1,3 +1,4 @@
+/* Liens bootstrap
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -6,6 +7,7 @@
   -webkit-box-sizing:  border-box;
   box-sizing:          border-box;
 }
+*/
 
 body {
   margin-top: 50px !important;
@@ -13,21 +15,26 @@ body {
 
 }
 
+h1 {
+  font-size: 36px;
+}
+
 .backgroundthp{
   background-image: asset-data-url("background.jpg");
   background-image: url("background.jpg");
   background-size: cover;
   height: 100vh;
-  filter: blur(3px);
-  -webkit-filter: blur(3px);
+
+  filter: saturate(1.5);
+  -webkit-filter: saturate(1.5);
   position: fixed;
   left: 0;
   right: 0;
   z-index: 0;
 }
 .backgroundthp:hover{
-  filter: saturate(1.5);
-    -webkit-filter: saturate(1.5);
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
 }
 
 .pageprincipale{
@@ -60,7 +67,9 @@ input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
+/*
   @include box_sizing;
+*/
 }
 
 input {
@@ -84,9 +93,11 @@ input {
   }
 }
 
+/*
 .field_with_errors {
   @extend .has-error;
   .form-control {
-    color: $state-danger-text;
+    color: red-text;
   }
 }
+*/
