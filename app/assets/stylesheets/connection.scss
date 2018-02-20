@@ -24,13 +24,13 @@
   /* Avec les flex
   width: 50%;
   */
-  height: 48vh;
+  height: 52vh;
   display: flex;
   justify-content: space-evenly;
   overflow: hidden;
-  -moz-border-radius : 13px;
-  -webkit-border-radius : 13px;
-  border-radius : 13px;
+  -moz-border-radius : 10px;
+  -webkit-border-radius : 10px;
+  border-radius : 10px;
 }
 
 .box_connection_left{
@@ -38,13 +38,24 @@
   background-color: rgba(255, 240, 245, 0.7);
   width: 55%;
   padding :15px;
+  line-height: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+.box_connection_left p{
+  text-align: center;
+}
+
 .box_connection_left i{
   padding-right :15px;
   width:30px;
 }
 .box_connection_left ul {
   list-style-type: none;
+  line-height: 2rem;
+  padding-left: 0;
 }
 
 .box_connection_right{
@@ -68,15 +79,17 @@
   text-align: center;
   line-height: 100%;
   text-align: center;
-  line-height: 3vh;
+  line-height: 5vh;
 }
 .box_connection_right_bottom a{
   color: white;
+  text-decoration: none;
 }
 
 .remember{
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 }
 .remember input{
   width: 20px;
