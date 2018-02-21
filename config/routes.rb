@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   get 'home/checkr', to: 'home#checkr'
   get 'home/flynn', to: 'home#flynn'
+  get 'home/newsweek', to: 'home#newsweek'
 end

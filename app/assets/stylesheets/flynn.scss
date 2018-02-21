@@ -10,7 +10,12 @@
 .container_flynn{
   width: 58vw;
   margin: auto;
+  li {
+    line-height: 1.3rem;
+  }
 }
+
+
 .menuflynn{
   display: flex;
   justify-content: space-between;

@@ -3,6 +3,7 @@
     <nav class="navbar-toggleable-md bg-faded">
       <ul class="nav navbar-nav navbar-right">
         <li class="active"><%= link_to "Accueil", '/' %></li>
+        <li><%= link_to "Newsweek", home_newsweek_path %></li>
         <% if user_signed_in? %>
           <li><%= link_to "#{current_user.email}", edit_user_registration_path %>
           </li>
