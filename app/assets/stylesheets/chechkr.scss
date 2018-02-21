@@ -285,3 +285,44 @@ li {
   bottom: -11vh;
   position: relative;
 }
+
+/* ------ Footer ---*/
+
+footer {
+  background-color: #102533;
+  padding-top: 3rem;
+}
+
+footer h4 {
+    color: #8FA1B2;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #3d4d56;
+}
+
+footer a {
+  color : white;
+  text-decoration: none;
+}
+
+footer ul{
+  padding-left: 0;
+}
+footer li {
+    list-style-type: none;
+}
+
+footer .deuxcolonnes{
+  display: flex;
+}
+footer .entry-social-connect img{
+  height:15px;
+}
+footer .footer-info ul{
+  display: flex;
+  margin-bottom: 0;
+  justify-content: flex-start;
+  li { padding-right: 5px;}
+}
